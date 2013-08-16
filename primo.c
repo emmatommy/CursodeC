@@ -1,13 +1,13 @@
 #include<stdio.h>
 int primo(int prim){
-	int y=0,i,x;
+	int y=0,i;
 	
-	for(i=2;i<prim;i++){
-		x=prim%i;
-	if(x==0){
-		y=y++;
+	for(i=1;i<=prim;i++){
+		
+	if(prim%i==0){
+		y++;
 	}
-}
+	}
 return y;
 }
 
@@ -18,10 +18,10 @@ printf("Dame un numero:\n");
 	scanf("%d",&prim);
     y=primo(prim);
 
-	if(y==0)
-	printf("el numero %d es un primo",prim);
+	if(y==2)
+    printf("El numero es primo");
 	else
-	printf("el numero %d no es un primo",prim);
+    printf("El numero no es primo"); 
+	return 0;
+	}
 
-return 0;
-}
